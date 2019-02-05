@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Login Page</title>
+	<style>
+	*
+	{
+		margin:0;
+		padding: 0;
+	}
+	.b{
+		background-image: url("images (1).jpg");
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.a{
+		height:450px;
+		width:450px;
+		background-color: #C0C0C0;
+		border-radius: 10px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-image: :download (1).jpg;
+	}
+	input{
+		padding:10px;
+		text-align: center;
+		border-radius: 10px;
+	}
+	.c{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.d{
+		position: relative;
+		left: 9%;
+	}
+	.anm{
+		text-align: center;
+	}
+	.btn{
+		border-radius: 10px;
+		width:104px;
+		background-color: #D8BFD8;
+		box-shadow: 0px 0px 40px black;
+		text-shadow: 0px 0px 10px black;
+	}
+</style>
+</head>
+<body>
+	<div class="b">
+		<div class="a">
+			<form name="MyForm"  method="post" onsubmit="return myValidation()">
+				<div class="anm"><h1>Login Page</h1><br></div>
+		Name:  <input class="d" type="text" name="nm" placeholder="Enter your name"><br><br>
+		Password: <input type="password" name="pwd" placeholder="Enter your Password" ><br><br>
+		<p>Enter your choice: </p><br>
+		<input type="checkbox" name="stu" value="Student"> Student<br>
+  <input type="checkbox" name="faculty" value="faculty">Faculty<br>
+  <input type="checkbox" name="Ad" value="admin" checked> Admin<br><br>
+		<div class="c"><input  class="btn" type="submit" value="submit"></div>
+	</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+				function myValidation(){
+			var value = document.forms["MyForm"]["nm"].value;
+			var value2 = document.forms["MyForm"]["pwd"].value;
+			var flag = true;
+			if(value == ""){
+				alert("Name cannot be empty");
+				flag =false;
+			}
+			if(value2 == ""){
+				alert("Password cannot be empty");
+				flag =false;
+			}
+			return flag;
+		}
+	</script>
+</body>
+</html>
